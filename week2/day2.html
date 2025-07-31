@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Navbar with Toggle Sidebar</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 8px 16px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .left-section, .center-section, .right-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+
+    .logo {
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .center-section {
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 0 16px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 2px 0 0 2px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-btn {
+      padding: 8px 12px;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-btn .material-icons {
+      color: #606060;
+      font-size: 20px;
+    }
+
+    .right-section .material-icons {
+      font-size: 24px;
+      margin-left: 20px;
+      cursor: pointer;
+      color: #606060;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #fff;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: -240px;
+      z-index: 999;
+      overflow-y: auto;
+      transition: left 0.3s ease;
+      padding-top: 60px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      cursor: pointer;
+      color: #000;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .sidebar-item .material-icons {
+      margin-right: 24px;
+      font-size: 24px;
+      color: #606060;
+    }
+
+    /* Content */
+    .main-content {
+      padding: 16px;
+      margin-top: 56px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-item"><span class="material-icons">home</span>Home</div>
+    <div class="sidebar-item"><span class="material-icons">explore</span>Explore</div>
+    <div class="sidebar-item"><span class="material-icons">subscriptions</span>Subscriptions</div>
+    <hr />
+    <div class="sidebar-item"><span class="material-icons">video_library</span>Library</div>
+    <div class="sidebar-item"><span class="material-icons">history</span>History</div>
+    <div class="sidebar-item"><span class="material-icons">smart_display</span>Your Videos</div>
+    <div class="sidebar-item"><span class="material-icons">watch_later</span>Watch Later</div>
+    <div class="sidebar-item"><span class="material-icons">thumb_up</span>Liked Videos</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="left-section">
+      <span class="material-icons menu-icon" onclick="toggleSidebar()">menu</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="logo" />
+    </div>
+    <div class="center-section">
+      <input type="text" placeholder="Search" class="search-input" />
+      <button class="search-btn">
+        <span class="material-icons">search</span>
+      </button>
+    </div>
+    <div class="right-section">
+      <span class="material-icons">videocam</span>
+      <span class="material-icons">apps</span>
+      <span class="material-icons">notifications</span>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="main-content">
+    <h2>Welcome to YouTube Clone</h2>
+    <p>This is a demo layout with toggle sidebar and navbar.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

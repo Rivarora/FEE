@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Navbar</title>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 8px 16px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .left-section,
+    .center-section,
+    .right-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+
+    .logo {
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .center-section {
+      flex-grow: 1;
+      max-width: 600px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 2px 0 0 2px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-btn {
+      padding: 8px 12px;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-btn .material-icons {
+      color: #606060;
+      font-size: 20px;
+    }
+
+    .right-section .material-icons {
+      font-size: 24px;
+      margin-left: 20px;
+      cursor: pointer;
+      color: #606060;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-section">
+      <span class="material-icons menu-icon">menu</span>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+        alt="YouTube Logo"
+        class="logo"
+      />
+    </div>
+
+    <div class="center-section">
+      <input type="text" placeholder="Search" class="search-input" />
+      <button class="search-btn">
+        <span class="material-icons">search</span>
+      </button>
+    </div>
+
+    <div class="right-section">
+      <span class="material-icons">videocam</span>
+      <span class="material-icons">apps</span>
+      <span class="material-icons">notifications</span>
+      <img
+        src="https://randomuser.me/api/portraits/men/75.jpg"
+        alt="User Avatar"
+        class="avatar"
+      />
+    </div>
+  </nav>
+</body>
+</html>

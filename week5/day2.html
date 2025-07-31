@@ -1,0 +1,177 @@
+<!-- Question 1: Video Fallback with Multiple Formats and Accessibility
+You are designing a responsive education website that needs to support videos across
+different browsers and assistive technologies. Write an HTML snippet that:
+● Embeds a video with MP4, WebM, and Ogg formats.
+● Displays a fallback message if the video is not supported.
+● Includes a subtitle track in English.
+● Adds a poster image before the video plays.
+● Ensures the video is muted by default and loops. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video controls muted loop poster="C:\Users\dell\Pictures\Screenshots\Screenshot 2025-07-27 163236.png">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        <source src="video.ogg" type="video/ogg">
+        <object data="file.pdf" type="application/pdf" width="500" height="400">
+         video is not supported.
+        </object>
+        <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+</html> -->
+ <!-- Question 2: Comparison and Use-Cases of <embed>, <object>, and
+<iframe>
+You are building a media-rich dashboard for a business website. The client wants to:
+● Display a PDF report.
+● Embed a YouTube tutorial.
+● Show a legacy Flash animation.
+● Integrate an external weather widget.
+
+a) Explain which tag (<embed>, <object>, or <iframe>) you would use in each scenario and
+why.
+b) Discuss the pros and cons of each tag in terms of:
+
+● Browser support
+● Fallback handling
+● Interactivity
+● Security risks  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>PDF Report</h2>
+    <embed src="report.pdf" type="application/pdf" width="600" height="400">
+    
+    <h2>YouTube Tutorial</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    
+    <h2>Legacy Flash Animation</h2>
+    <object data="animation.swf" type="application/x-shockwave-flash" width="600" height="400">
+        <p>Your browser does not support Flash. Please update your browser or install Flash Player.</p>
+    </object>
+    
+    <h2>External Weather Widget</h2>
+    <iframe src="https://weatherwidget.io/" width="300" height="200"></iframe>
+    
+</body>
+</html> -->
+<!-- Question 3: Audio Player with Advanced Controls and Transcript Feature
+Create an HTML structure for an audio player that:
+● Autoplays a podcast but starts muted.
+● Includes loop, volume control, and preload metadata.
+● Offers a transcript of the audio content for accessibility.
+● Uses multiple <source> formats for browser compatibility.
+● Provides a user-friendly fallback message. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls autoplay muted loop preload="metadata" volume="0.5" transcript="This is an audio file.">
+        <source src=" week7-bounce.m4a" type="audio/mpeg">
+    </audio>
+    <div class="transcript">
+        <h2>Transcript</h2>
+        <p>This is the transcript of the podcast episode.
+        It provides a detailed overview of the content discussed in the audio.</p>
+    </div>
+
+</body>
+</html> -->
+<!-- Question 4: Build a Responsive Media Section Using HTML and CSS
+Design a responsive section of a portfolio website that includes:
+● A self-hosted video showcasing a project (with subtitles, poster image, and custom size).
+● A background music loop using <audio> that auto-plays only on desktop screens.
+● An embedded Google Map inside an <iframe> showing the office location.
+● A downloadable PDF resume shown inside an <object> tag with fallback.
+
+a) Provide the full HTML and relevant CSS for the section.
+b) Explain how media queries and attributes like autoplay, muted, and controls behave
+differently on mobile vs desktop browsers.
+c) What are the accessibility considerations and performance impacts of loading too much
+multimedia? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="portfolio-media">
+        <h1>Project Showcase</h1>
+        
+        <video controls muted loop poster="poster-image.jpg" width="640" height="360">
+            <source src="video.mp4" type="video/mp4">
+            <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English">
+            Your browser does not support the video tag.
+        </video>
+        
+        <audio id="background-music" loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789012!2d-122.12345678901234!3d37.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085801234567890%3A0x1234567890123456!2sOffice+Location!5e0!3m2!1sen!2sus!4v1234567890123" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        
+        <object data="resume.pdf" type="application/pdf" width="600" height="400">
+            <p>Your browser does not support PDFs. Download the PDF to view it: <a href="resume.pdf">Download PDF</a>.</p>
+        </object>
+    </section>
+
+    <style>
+        .portfolio-media {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        video, audio, iframe, object {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            audio {
+                display: none; /* Hide audio on mobile */
+            }
+        }
+    </style>
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
