@@ -1,0 +1,105 @@
+<!-- Difficult Question
+4. Create a full semantic HTML structure for a News Website page
+Include the following using semantic tags:
+● Site title and navigation bar at the top
+
+● A main section with 2 news articles (each having a title and short description)
+● An aside section with trending topics
+● A footer with social media links -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+        article {
+            width: 60%;
+        }
+        aside {
+            width: 30%;
+            background-color: #e0e0e0;
+            padding: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>News Today</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#world">World</a>
+            <a href="#technology">Technology</a>
+            <a href="#sports">Sports</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Global Economy Hits New Milestone</h2>
+                <p>The global economy has seen tremendous growth in the last quarter, with various sectors experiencing rapid expansion...</p>
+            </section>
+            <section>
+                <h2>Breakthroughs in Quantum Computing</h2>
+                <p>Scientists have recently made breakthroughs in quantum computing that could revolutionize industries ranging from healthcare to finance...</p>
+            </section>
+        </article>
+
+        <aside>
+            <h3>Trending Topics</h3>
+            <ul>
+                <li>Climate Change Awareness</li>
+                <li>Space Exploration Updates</li>
+                <li>Global Health Initiatives</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 News Today</p>
+        <div>
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!-- 3. Use the <pre>, <code>, and <kbd> Tags
+Create an HTML snippet that shows:A preformatted block of code (use <pre> and <code>)
+A keyboard shortcut (use <kbd> for Ctrl + S) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pre, Code, and Kbd Demo</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            overflow-x: auto;
+        }
+        kbd {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: monospace;
+            box-shadow: inset 0 -1px 0 #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Preformatted Code Block</h2>
+    <pre><code>
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+greet("World");
+    </code></pre>
+
+    <h2>Keyboard Shortcut</h2>
+    <p>To save your document, press <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+
+</body>
+</html>

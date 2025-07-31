@@ -1,0 +1,58 @@
+<!-- Question 4
+Create a form for user registration with the following fields and constraints:
+● Full Name (required)
+● Email (required, must be valid)
+● Password (required, min 8 characters)
+● Confirm Password (required, must match password — ignore matching for now)
+● Age (between 18–99)
+
+● Accept Terms checkbox (must be checked to submit)
+🧪 Hint: Use required, type, min, max, and checkbox validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>User Registration</title>
+</head>
+<body>
+
+    <h2>User Registration</h2>
+
+    <form action="#" method="post">
+
+        <!-- Full Name -->
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required minlength="8">
+        <br><br>
+
+        <!-- Confirm Password (no matching validation here) -->
+        <label for="confirm-password">Confirm Password:</label><br>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="8">
+        <br><br>
+
+        <!-- Age -->
+        <label for="age">Age (18 - 99):</label><br>
+        <input type="number" id="age" name="age" min="18" max="99">
+        <br><br>
+
+        <!-- Accept Terms -->
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I accept the Terms and Conditions</label>
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- 3. Design a blog post using <article>, <section>, and <aside>
+Add a heading, two paragraphs, and a sidebar showing “Recent Posts”. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        article {
+            flex: 3;
+            padding: 2rem;
+        }
+        aside {
+            flex: 1;
+            background-color: #f0f0f0;
+            padding: 2rem;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <article>
+            <section>
+                <h1>Exploring the Beauty of Nature</h1>
+                <p>Nature has always been a source of inspiration and peace. From towering mountains to gentle rivers, the beauty around us is endless and deeply calming.</p>
+                <p>Spending time in nature helps improve mental well-being and fosters a sense of connection with the world. Whether hiking, camping, or simply walking in a park, it's worth embracing.</p>
+            </section>
+        </article>
+
+        <aside>
+            <h2>Recent Posts</h2>
+            <ul>
+                <li>The Power of Minimalism</li>
+                <li>10 Productivity Hacks</li>
